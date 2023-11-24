@@ -9,6 +9,39 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 #
 #******************************************************************************
+#zxc
+
+
+
+
+#默认方式cmake OPENMP GUI
+#Using python include path 'C:/ProgramData/anaconda3/include' and libs 'C:/ProgramData/anaconda3/libs/python310.lib'
+
+
+# 【配置DLL】
+# 【QT错误】
+# 安装 MSVC 2019
+# 安装WebGL Streaming Plugin
+# 设置环境变量。
+# ref https://blog.csdn.net/BraveNewWorld10/article/details/132223621
+
+# QT_QPA_PLATFORM_PLUGIN_PATH
+# C:\Program Files\ANSYS Inc\v231\optiSLang\lib\python3.7\Lib\site-packages\PySide2\plugins\platforms
+
+# 【Python错误】
+# 环境变量:
+
+# PATH:C:\ProgramData\anaconda3
+# C:\ProgramData\anaconda3\python.exe
+
+# PYTHONHOME、PYTHONPATH:
+# C:\ProgramData\anaconda3
+# C:\ProgramData\anaconda3
+# cmd检查python -V
+
+# ./manta F:\yzx-2\mantaflow\scenes\simpleplume.py
+
+
 
 project (MantaFlow)
 cmake_minimum_required(VERSION 2.8)
@@ -25,7 +58,7 @@ set(MANTAVERSION "0.13")
 # - allow override from command line on OsX, eg use "cmake ..  -DCMAKE_PREFIX_PATH=/Users/someone/qt5.2.1/5.2.1/clang_64/
 
 if(WIN32)
-	set(WIN_QT_PATH        "C:/Qt/5.9/msvc2013_64_opengl") # qt5/win64
+	set(WIN_QT_PATH        "F:/Qt/5.15.2/msvc2019_64") #prm qt5/win64
 	set(WIN_PYTHON_PATH    "C:/Python36") # choose python version with PYTHON_VERSION above
 	set(CMAKE_LIBRARY_PATH "C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x64")
 	set(CMAKE_PREFIX_PATH ${WIN_QT_PATH})
@@ -203,7 +236,6 @@ set(PP_SOURCES
 	source/plugin/fire.cpp
 	source/plugin/fluidguiding.cpp
 	source/plugin/kepsilon.cpp
-	source/plugin/implicitdensityprojection.cpp
 	source/plugin/initplugins.cpp
 	source/plugin/meshplugins.cpp
 	source/plugin/pressure.cpp
